@@ -45,7 +45,7 @@ body {
     margin-top: 200px ;
     display: flex ;
     justify-content: space-evenly;
-    width: 400px ;
+    width: 70% ;
 
 }
 
@@ -54,5 +54,5 @@ body {
     color: white ;
     padding: 15px ;
     border-radius: 8px ;
-    flex: 0 1 30% ;
+    flex: 0 1 15% ;
 }

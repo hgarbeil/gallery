@@ -5,11 +5,20 @@ const rotateButtonEl = document.getElementById("rotate") ;
 const reloadEl = document.querySelector('#reload') ;
 var timerInc = 100 ;
 var contTimer = true ;
+var imageArr=[] ;
 let x = 0 ;
 
 const imageDir = 'images/' ;
 
-
+addEventListener('DOMContentLoaded',(event)=>{
+    $ajaxUtils.sendGetRequest(imageDir+'filelist.txt', function(responseText){
+        var lines = responseText.split('\n');
+        lines.forEach(function(l){
+            imageArr.push(l) ;
+        }
+        );
+    },false);
+}) ;
 
 prevButtonEl.addEventListener("click",()=>{
     x = x + 45 ;
@@ -28,21 +37,18 @@ reloadEl.addEventListener("click",()=>{
 }) ;
 
 function loadImages(){
-    console.log(imageDir) ;
-    const fs = require(['fs']) ;
-    
-    fs.readdir(imageDir, (err, files)) ;
     imageContainerEl.innerHTML="" ;
     let newHtml ="" ;
-    for (let i=1; i<9; i++) {
-        let index = Math.floor(Math.random() * files.length) ;
-        let imfile = index+files[index];
-        newHtml += `<span style="--i: ${index}">
-                    <img src="${imfiles}" alt="">
+    for (let ival=1; ival<9; ival++) {
+        let index = Math.floor(Math.random() * (imageArr.length-1)) ;
+        let imfile = imageDir+imageArr[index];
+        newHtml += `<span style="--i: ${ival}">
+                    <img src="${imfile}" alt="">
                     </span>`   
         
 
     }
+    console.log(newHtml) ;
     imageContainerEl.innerHTML = newHtml ;
 
 }
