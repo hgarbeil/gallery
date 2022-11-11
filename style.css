@@ -1,0 +1,58 @@
+:root{
+    --btn-color : navy ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin:0 ;
+    padding: 0px ;
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100vh ;
+    background-color: black ;
+}
+
+.image-container{
+    margin-top: 50px ;
+    
+    position: relative;
+    width: 200px ;
+    height:200px ;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg) rotateX(-2deg) ;
+}
+.image-container span {
+    position: absolute ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px)  ;
+    transition: .1s ease ;
+    
+}
+
+.image-container span img {
+    position:absolute;
+    left:0 ;
+    top:0 ; 
+    width: 100% ;
+    
+}
+
+.button-container{
+    margin-top: 200px ;
+    display: flex ;
+    justify-content: space-evenly;
+    width: 400px ;
+
+}
+
+.btn {
+    background-color: var(--btn-color);
+    color: white ;
+    padding: 15px ;
+    border-radius: 8px ;
+    flex: 0 1 30% ;
+}
