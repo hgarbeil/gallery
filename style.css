@@ -12,6 +12,12 @@ body {
     align-items: center;
     height:100vh ;
     background-color: black ;
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+h1 {
+    color: white ;
+    font-size : 2rem ;
 }
 
 .image-container{
