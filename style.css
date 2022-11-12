@@ -24,7 +24,12 @@ body {
     align-items : center ;
 }
 
-h1 {
+.audio {
+     background-color: gray;
+     
+
+}
+h1,h6 {
     color: white ;
     font-size : 2rem ;
 }

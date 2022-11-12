@@ -60,6 +60,8 @@ function startRotate() {
     updateGallery (x) ;
     if (!contTimer){
         clearInterval (interfuncId);
+        rotateButtonEl.classList.remove('spin');
+        rotateButtonEl.innerText ='Rotate'  ;
     }
     },timerInc); 
 }
@@ -75,8 +77,6 @@ rotateButtonEl.addEventListener("click",()=>{
     console.log(clist);
     if (clist.contains ("spin")){
         contTimer = false ;
-        rotateButtonEl.innerText ='Rotate'  ;
-        rotateButtonEl.classList.remove('spin');
     }
     else {
         console.log("in rotate") ;
