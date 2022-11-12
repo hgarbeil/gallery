@@ -13,11 +13,25 @@ body {
     height:100vh ;
     background-color: black ;
     font-family: 'Rubik Bubbles', cursive;
+
+}
+.titleblock {
+    width: 70% ;
+    padding : 0 ;
+    margin: 0 ;
+    display: flex ;
+    justify-content: space-evenly;
+    align-items : center ;
 }
 
 h1 {
     color: white ;
     font-size : 2rem ;
+}
+.titleblock img{
+    border-radius : 20px ;
+    height: 90px ;
+
 }
 
 .image-container{
